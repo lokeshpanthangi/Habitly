@@ -1,3 +1,10 @@
-envVars:
-  - key: PORT
-    value: 8080
+services:
+  - name: vite-react-app
+    type: web
+    env: static
+    staticPublishPath: /dist
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: PORT
+        value: 8080
